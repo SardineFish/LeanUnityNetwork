@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 54325563021117500}
   - component: {fileID: 136545301271370334}
   - component: {fileID: 114821153329785964}
+  - component: {fileID: 114528391957255540}
+  - component: {fileID: 114880689033340170}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -202,7 +204,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!65 &65083699157492880
 BoxCollider:
@@ -216,6 +218,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114528391957255540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1692142806977556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5cb905daece2f848a83c0ee99b60d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VerticalMovment: 30
+  HorizontalMovment: 30
+  Jump: 3
 --- !u!114 &114821153329785964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -248,6 +264,27 @@ MonoBehaviour:
     i15: 152
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
+--- !u!114 &114880689033340170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1692142806977556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!136 &136545301271370334
 CapsuleCollider:
   m_ObjectHideFlags: 1
